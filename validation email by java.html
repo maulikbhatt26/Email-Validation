@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+function chk(){
+r=/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+v1= document.getElementById('e1').value;
+
+if (r.test(v1)==false){
+	
+	alert("invalid emali id");
+	return false;
+	}
+	
+p=/^[0-9]{10,10}$/;
+v2= document.getElementById('m1').value;
+
+if (p.test(v2)==false){
+
+alert("invalid mobile no");
+	return false;
+
+}
+}
+
+
+
+
+
+
+</script>
+</head>
+
+<body bgcolor="#996600">
+<pre>
+<form>
+
+Name:	<input type="text" placeholder="User Name" name="n1" />
+
+Age:   	<input type="number" placeholder="age" name="a1" />
+
+Email: 	<input type="email" placeholder="email id" id="e1" required pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}" title="No special character" />
+
+Mobile: <input type="text" placeholder="contact no" id="m1" required pattern="[0-9]{10,10}" />
+
+		<input type="submit" value="ok"  onclick="return chk();"/>
+
+		<input type="reset" value"reset" />
+
+</form>
+</pre>
+</body>
+</html>
